@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', function () {
       plotBackgroundColor: null,
       plotBorderWidth: 0,
       plotShadow: false,
+      width: 300,
+      height: 300,
+      margin: [0, 0, 0, 0]
       // events: {
       //   load: function() {
       //     this.viewData()
@@ -95,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Assign ID's to Elements
   const highChartsDataTable = document.querySelector("#coupon-breakdown-section-chart .highcharts-data-table");
-  highChartsDataTable.setAttribute('id', "highcharts-data-table");
+  highChartsDataTable.setAttribute('id', "coupon-breakdown-highcharts-data-table");
 });
 
 

@@ -1,36 +1,53 @@
-html,
 body {
   margin: 0;
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
+
+/*==== STYLING FOR COUPON BREAKDOWN DONUT CHART AND TABLE ===*/
 #coupon-breakdown-section-chart {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
 }
 
 #coupon-breakdown-section-chart #container {
-  width: 50%;
+  width: auto;
+  border: 2px solid black;
 }
 
-#coupon-breakdown-section-chart caption {
-  visibility: hidden;
-}
-
-#coupon-breakdown-section-chart caption::after {
-  visibility: visible;
-  content: "Coupon Breakdown";
-}
-
-#highcharts-data-table {
-  width: 50%;
-}
-
+/* Removes highcharts.com */
 .highcharts-credits {
   display: none;
 }
 
-#coupon-breakdown-section-chart tbody tr:nth-child(1) th::before {
+/* Coupon Breakdown table data alignment */
+#coupon-breakdown-highcharts-data-table caption {
+  visibility: hidden;
+  caption-side: top;
+}
+#coupon-breakdown-highcharts-data-table caption::before {
+  visibility: visible;
+  content: "Coupon Breakdown";
+  font-weight: bold;
+  font-size: 22px;
+  color: black;
+}
+#coupon-breakdown-highcharts-data-table {
+  margin-left: 50px;
+}
+#coupon-breakdown-highcharts-data-table th {
+  width: 150px;
+}
+#coupon-breakdown-highcharts-data-table tr:nth-child(1) th:nth-child(2) {
+  text-align: right;
+}
+#coupon-breakdown-highcharts-data-table tr td {
+  text-align: right;
+}
+
+/* Adds circle symbol next to category items */
+#coupon-breakdown-highcharts-data-table tbody tr:nth-child(1) th::before {
   display: inline-block;
   content: "";
   width: 10px;
@@ -39,8 +56,7 @@ body {
   margin-right: 5px;
   border-radius: 50%;
 }
-
-#coupon-breakdown-section-chart tbody tr:nth-child(2) th::before {
+#coupon-breakdown-highcharts-data-table tbody tr:nth-child(2) th::before {
   display: inline-block;
   content: "";
   width: 10px;
@@ -49,8 +65,7 @@ body {
   margin-right: 5px;
   border-radius: 50%;
 }
-
-#coupon-breakdown-section-chart tbody tr:nth-child(3) th::before {
+#coupon-breakdown-highcharts-data-table tbody tr:nth-child(3) th::before {
   display: inline-block;
   content: "";
   width: 10px;
@@ -59,8 +74,7 @@ body {
   margin-right: 5px;
   border-radius: 50%;
 }
-
-#coupon-breakdown-section-chart tbody tr:nth-child(4) th::before {
+#coupon-breakdown-highcharts-data-table tbody tr:nth-child(4) th::before {
   display: inline-block;
   content: "";
   width: 10px;
@@ -69,8 +83,7 @@ body {
   margin-right: 5px;
   border-radius: 50%;
 }
-
-#coupon-breakdown-section-chart tbody tr:nth-child(5) th::before {
+#coupon-breakdown-highcharts-data-table tbody tr:nth-child(5) th::before {
   display: inline-block;
   content: "";
   width: 10px;
@@ -79,8 +92,7 @@ body {
   margin-right: 5px;
   border-radius: 50%;
 }
-
-#coupon-breakdown-section-chart tbody tr:nth-child(6) th::before {
+#coupon-breakdown-highcharts-data-table tbody tr:nth-child(6) th::before {
   display: inline-block;
   content: "";
   width: 10px;
@@ -89,8 +101,7 @@ body {
   margin-right: 5px;
   border-radius: 50%;
 }
-
-#coupon-breakdown-section-chart tbody tr:nth-child(7) th::before {
+#coupon-breakdown-highcharts-data-table tbody tr:nth-child(7) th::before {
   display: inline-block;
   content: "";
   width: 10px;
