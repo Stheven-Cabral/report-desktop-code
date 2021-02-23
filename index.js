@@ -1,5 +1,5 @@
 // Try to mockup data for easier integration.
-const dataColors = ["#00366d", "#114b82", "#286097", "#3c76ae", "#538bc2"];
+const dataColors = ["#00366d", "#114b82", "#286097", "#3c76ae", "#538bc2", "#95c1ec", "#bfdbf8"];
 
 const donutChartData = [
   {
@@ -30,12 +30,12 @@ const donutChartData = [
   {
     y: 0.01,
     name: "8-10 %",
-    color: dataColors[4]
+    color: dataColors[5]
   },
   {
     y: 0,
     name: ">10 %",
-    color: dataColors[4]
+    color: dataColors[6]
   },
 ];
 
@@ -50,7 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
     chart: {
       plotBackgroundColor: null,
       plotBorderWidth: 0,
-      plotShadow: false
+      plotShadow: false,
+      // events: {
+      //   load: function() {
+      //     this.viewData()
+      //   }
+      // }
     },
     title: {
       text: null
@@ -75,8 +80,22 @@ document.addEventListener('DOMContentLoaded', function () {
     series: [{
       type: 'pie',
       name: 'Coupon Breakdown',
-      innerSize: '70%',
+      innerSize: '75%',
       data: donutChartData
-    }]
+    }],
+    exporting: {
+      showTable: true
+    },
+    navigation: {
+      buttonOptions: {
+        enabled: false
+      }
+    }
   });
+
+  // Assign ID's to Elements
+  const highChartsDataTable = document.querySelector("#coupon-breakdown-section-chart .highcharts-data-table");
+  highChartsDataTable.setAttribute('id', "highcharts-data-table");
 });
+
+

@@ -3,3 +3,99 @@ body {
   margin: 0;
   font-family: 'Open Sans Condensed', sans-serif;
 }
+
+#coupon-breakdown-section-chart {
+  display: flex;
+  flex-direction: row;
+}
+
+#coupon-breakdown-section-chart #container {
+  width: 50%;
+}
+
+#coupon-breakdown-section-chart caption {
+  visibility: hidden;
+}
+
+#coupon-breakdown-section-chart caption::after {
+  visibility: visible;
+  content: "Coupon Breakdown";
+}
+
+#highcharts-data-table {
+  width: 50%;
+}
+
+.highcharts-credits {
+  display: none;
+}
+
+#coupon-breakdown-section-chart tbody tr:nth-child(1) th::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #00366d;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+#coupon-breakdown-section-chart tbody tr:nth-child(2) th::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #114b82;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+#coupon-breakdown-section-chart tbody tr:nth-child(3) th::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #286097;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+#coupon-breakdown-section-chart tbody tr:nth-child(4) th::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #3c76ae;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+#coupon-breakdown-section-chart tbody tr:nth-child(5) th::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #538bc2;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+#coupon-breakdown-section-chart tbody tr:nth-child(6) th::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #95c1ec;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+#coupon-breakdown-section-chart tbody tr:nth-child(7) th::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #bfdbf8;
+  margin-right: 5px;
+  border-radius: 50%;
+}

@@ -6,6 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Report Desktop View</title>
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="index.js"></script>
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap"
     rel="stylesheet">
@@ -13,9 +21,10 @@
 </head>
 
 <body>
-  <div id="asset-allocation-geo" class="section">
-    <h5>Coupon Breakdown</h5>
-    <div id="container" style="width:100%; height:400px;"></div>
+  <div id="coupon-breakdown-section" class="section">
+    <div id="coupon-breakdown-section-chart">
+      <div id="container"></div>
+    </div>
     <table style="width:100%" id="asset-allocation-geo-table">
       <tr>
         <th>Symbol</th>
@@ -117,11 +126,7 @@
   </div>
   </div>
 
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-  <script src="https://code.highcharts.com/modules/data.js"></script>
-  <script src="index.js"></script>
+  
 </body>
 
 </html>
