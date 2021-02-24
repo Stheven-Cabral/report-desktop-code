@@ -1,3 +1,21 @@
+/*==== GENERAL STYLING ===*/
+html {
+  /* 
+  Default color variables for page. 
+  The number of circle icon variables can be adjusted based on the number of data points.
+  */
+  --coupon-breakdown-header-color: #b0acac;
+  --securities-table-row-color: #f5f5f5;
+  --category-circle-icon-0: black;
+  --category-circle-icon-1: black;
+  --category-circle-icon-2: black;
+  --category-circle-icon-3: black;
+  --category-circle-icon-4: black;
+  --category-circle-icon-5: black;
+  --category-circle-icon-6: black;
+
+}
+
 body {
   margin: 0;
   font-family: 'Open Sans Condensed', sans-serif;
@@ -9,11 +27,11 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
 }
 
 #coupon-breakdown-section-chart #container {
   width: auto;
-  border: 2px solid black;
 }
 
 /* Removes highcharts.com */
@@ -21,10 +39,11 @@ body {
   display: none;
 }
 
-/* Coupon Breakdown table data alignment */
+/* Change table title to 'Coupon Breakdown' */
 #coupon-breakdown-highcharts-data-table caption {
   visibility: hidden;
   caption-side: top;
+  margin: 10px 0px;
 }
 #coupon-breakdown-highcharts-data-table caption::before {
   visibility: visible;
@@ -33,9 +52,35 @@ body {
   font-size: 22px;
   color: black;
 }
+
 #coupon-breakdown-highcharts-data-table {
   margin-left: 50px;
 }
+
+/* Update Coupon Breakdown table headers */
+#coupon-breakdown-highcharts-data-table thead tr th {
+  visibility: hidden;
+  position: relative;
+}
+#coupon-breakdown-highcharts-data-table thead tr th:nth-child(1)::before {
+  visibility: visible;
+  position: absolute;
+  content: "Current Allocation";
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--coupon-breakdown-header-color);
+}
+#coupon-breakdown-highcharts-data-table thead tr th:nth-child(2)::before {
+  visibility: visible;
+  position: absolute;
+  content: "Portfolio";
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--coupon-breakdown-header-color);
+  right: 0;
+}
+
+/* Coupon Breakdown table data alignment */
 #coupon-breakdown-highcharts-data-table th {
   width: 150px;
 }
@@ -46,13 +91,17 @@ body {
   text-align: right;
 }
 
+td.number {
+  font-weight: bold;
+}
+
 /* Adds circle symbol next to category items */
 #coupon-breakdown-highcharts-data-table tbody tr:nth-child(1) th::before {
   display: inline-block;
   content: "";
   width: 10px;
   height: 10px;
-  background-color: #00366d;
+  background-color: var(--category-circle-icon-0);
   margin-right: 5px;
   border-radius: 50%;
 }
@@ -61,7 +110,7 @@ body {
   content: "";
   width: 10px;
   height: 10px;
-  background-color: #114b82;
+  background-color: var(--category-circle-icon-1);
   margin-right: 5px;
   border-radius: 50%;
 }
@@ -70,7 +119,7 @@ body {
   content: "";
   width: 10px;
   height: 10px;
-  background-color: #286097;
+  background-color: var(--category-circle-icon-2);
   margin-right: 5px;
   border-radius: 50%;
 }
@@ -79,7 +128,7 @@ body {
   content: "";
   width: 10px;
   height: 10px;
-  background-color: #3c76ae;
+  background-color: var(--category-circle-icon-3);
   margin-right: 5px;
   border-radius: 50%;
 }
@@ -88,7 +137,7 @@ body {
   content: "";
   width: 10px;
   height: 10px;
-  background-color: #538bc2;
+  background-color: var(--category-circle-icon-4);
   margin-right: 5px;
   border-radius: 50%;
 }
@@ -97,7 +146,7 @@ body {
   content: "";
   width: 10px;
   height: 10px;
-  background-color: #95c1ec;
+  background-color: var(--category-circle-icon-5);
   margin-right: 5px;
   border-radius: 50%;
 }
@@ -106,7 +155,52 @@ body {
   content: "";
   width: 10px;
   height: 10px;
-  background-color: #bfdbf8;
+  background-color: var(--category-circle-icon-6);
   margin-right: 5px;
   border-radius: 50%;
+}
+
+
+/*==== STYLING FOR SECURITIES TABLE ===*/
+
+#securities-table .data:nth-child(even) {
+  background-color: var(--securities-table-row-color);
+  border-top: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+}
+
+#securities-table th,
+#securities-table td {
+  padding: 5px;
+}
+
+.data,
+#header-categories,
+#portfolio-weights-data {
+  text-align: center;
+}
+
+.data td:first-child,
+#portfolio-weights-data td:first-child {
+  font-weight: bold;
+}
+
+#header-categories th:nth-child(1),
+#header-categories th:nth-child(2),
+.data td:nth-child(1),
+.data td:nth-child(2),
+#portfolio-weights-data td:nth-child(1),
+#portfolio-weights-data td:nth-child(2) {
+  text-align: left;
+}
+
+#header-categories th:nth-child(3),
+.data td:nth-child(3),
+#portfolio-weights-data td:nth-child(3) {
+  text-align: right;
+}
+
+tr#portfolio-weights-data {
+  border-top: 2px solid var(--category-circle-icon-0);
+  background-color: var(--securities-table-row-color);
 }
