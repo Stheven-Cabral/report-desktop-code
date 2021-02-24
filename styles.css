@@ -1,18 +1,17 @@
 /*==== GENERAL STYLING ===*/
-html {
+:root {
   /* 
   Default color variables for page. 
   The number of circle icon variables can be adjusted based on the number of data points.
   */
-  --coupon-breakdown-header-color: #b0acac;
-  --securities-table-row-color: #f5f5f5;
-  --category-circle-icon-0: black;
-  --category-circle-icon-1: black;
-  --category-circle-icon-2: black;
-  --category-circle-icon-3: black;
-  --category-circle-icon-4: black;
-  --category-circle-icon-5: black;
-  --category-circle-icon-6: black;
+  --table-border: #a3a3a3;
+  --category-circle-icon-0: grey;
+  --category-circle-icon-1: grey;
+  --category-circle-icon-2: grey;
+  --category-circle-icon-3: grey;
+  --category-circle-icon-4: grey;
+  --category-circle-icon-5: grey;
+  --category-circle-icon-6: grey;
 
 }
 
@@ -43,18 +42,32 @@ body {
 #coupon-breakdown-highcharts-data-table caption {
   visibility: hidden;
   caption-side: top;
-  margin: 10px 0px;
+  margin: 5px 0px;
 }
 #coupon-breakdown-highcharts-data-table caption::before {
   visibility: visible;
-  content: "Coupon Breakdown";
+  content: "COUPON BREAKDOWN";
   font-weight: bold;
-  font-size: 22px;
+  font-size: 20px;
   color: black;
 }
 
 #coupon-breakdown-highcharts-data-table {
   margin-left: 50px;
+}
+
+#coupon-breakdown-highcharts-data-table tr {
+  margin-left: 50px;
+  border-top: 1px solid var(--table-border);
+}
+
+#coupon-breakdown-highcharts-data-table th,
+#coupon-breakdown-highcharts-data-table td {
+  padding: 2.5px;
+}
+
+th.text {
+  font-weight: 100;
 }
 
 /* Update Coupon Breakdown table headers */
@@ -66,23 +79,17 @@ body {
   visibility: visible;
   position: absolute;
   content: "Current Allocation";
-  font-weight: bold;
-  font-size: 16px;
-  color: var(--coupon-breakdown-header-color);
 }
 #coupon-breakdown-highcharts-data-table thead tr th:nth-child(2)::before {
   visibility: visible;
   position: absolute;
   content: "Portfolio";
-  font-weight: bold;
-  font-size: 16px;
-  color: var(--coupon-breakdown-header-color);
   right: 0;
 }
 
 /* Coupon Breakdown table data alignment */
 #coupon-breakdown-highcharts-data-table th {
-  width: 150px;
+  width: 140px;
 }
 #coupon-breakdown-highcharts-data-table tr:nth-child(1) th:nth-child(2) {
   text-align: right;
@@ -91,99 +98,98 @@ body {
   text-align: right;
 }
 
-td.number {
-  font-weight: bold;
-}
-
 /* Adds circle symbol next to category items */
 #coupon-breakdown-highcharts-data-table tbody tr:nth-child(1) th::before {
   display: inline-block;
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: var(--category-circle-icon-0);
-  margin-right: 5px;
-  border-radius: 50%;
+  margin-right: 10px;
 }
 #coupon-breakdown-highcharts-data-table tbody tr:nth-child(2) th::before {
   display: inline-block;
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: var(--category-circle-icon-1);
-  margin-right: 5px;
-  border-radius: 50%;
+  margin-right: 10px;
 }
 #coupon-breakdown-highcharts-data-table tbody tr:nth-child(3) th::before {
   display: inline-block;
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: var(--category-circle-icon-2);
-  margin-right: 5px;
-  border-radius: 50%;
+  margin-right: 10px;
 }
 #coupon-breakdown-highcharts-data-table tbody tr:nth-child(4) th::before {
   display: inline-block;
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: var(--category-circle-icon-3);
-  margin-right: 5px;
-  border-radius: 50%;
+  margin-right: 10px;
 }
 #coupon-breakdown-highcharts-data-table tbody tr:nth-child(5) th::before {
   display: inline-block;
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: var(--category-circle-icon-4);
-  margin-right: 5px;
-  border-radius: 50%;
+  margin-right: 10px;
 }
 #coupon-breakdown-highcharts-data-table tbody tr:nth-child(6) th::before {
   display: inline-block;
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: var(--category-circle-icon-5);
-  margin-right: 5px;
-  border-radius: 50%;
+  margin-right: 10px;
 }
 #coupon-breakdown-highcharts-data-table tbody tr:nth-child(7) th::before {
   display: inline-block;
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: var(--category-circle-icon-6);
-  margin-right: 5px;
-  border-radius: 50%;
+  margin-right: 10px;
 }
 
 
 /*==== STYLING FOR SECURITIES TABLE ===*/
+#securities-table-title {
+  caption-side: top;
+  font-size: 20px;
+  color: black;
+  margin: 5px 0px;
+}
 
-#securities-table .data:nth-child(even) {
-  background-color: var(--securities-table-row-color);
-  border-top: 2px solid lightgray;
-  border-bottom: 2px solid lightgray;
+#securities-table .data {
+  border-top: 1px solid var(--table-border);
 }
 
 #securities-table th,
 #securities-table td {
   padding: 5px;
+  border-right: 1px dashed var(--table-border);
+}
+
+#portfolio-weights-data td:nth-child(1),
+#portfolio-weights-data td:nth-child(2) {
+  border-right: none;
+}
+
+#header-categories th {
+  font-weight: normal;
 }
 
 .data,
 #header-categories,
 #portfolio-weights-data {
-  text-align: center;
+  text-align: right;
 }
 
-.data td:first-child,
-#portfolio-weights-data td:first-child {
-  font-weight: bold;
-}
 
 #header-categories th:nth-child(1),
 #header-categories th:nth-child(2),
@@ -194,13 +200,34 @@ td.number {
   text-align: left;
 }
 
-#header-categories th:nth-child(3),
-.data td:nth-child(3),
-#portfolio-weights-data td:nth-child(3) {
-  text-align: right;
+#portfolio-weights-data {
+  border-top: 1px solid var(--table-border);
 }
 
-tr#portfolio-weights-data {
-  border-top: 2px solid var(--category-circle-icon-0);
-  background-color: var(--securities-table-row-color);
+#portfolio-weights-data td:first-child {
+  font-weight: bold;
+}
+
+/*==== COLORS FOR REFERENCE ONLY ===*/
+:root {
+--green-1: #081F1C;
+--green-2: #125131;
+--green-3: #167633;
+--green-4: #21A235;
+--green-5: #36BA39;
+--green-6: #54C53C;
+--green-7: #78CB42;
+--green-8: #9CD353;
+--green-9: #C2E576;
+--green-10: #E7F4B8;
+--blue-1: #0E003C;
+--blue-2: #1c1880;
+--blue-3: #1d2d96;
+--blue-4: #1f4cab;
+--blue-5: #1f4cab;
+--blue-6: #308bc4;
+--blue-7: #3dabcb;
+--blue-8: #3dabcb;
+--blue-9: #7ddcdc;
+--blue-10: #7ddcdc;
 }
