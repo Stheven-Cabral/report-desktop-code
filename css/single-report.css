@@ -5,6 +5,7 @@
   The number of circle icon variables can be adjusted based on the number of data points.
   */
   --table-border: #a3a3a3;
+  --table-border-light: #dadada;
   --category-circle-icon-0: grey;
   --category-circle-icon-1: grey;
   --category-circle-icon-2: grey;
@@ -42,7 +43,6 @@ body {
 #coupon-breakdown-highcharts-data-table caption {
   visibility: hidden;
   caption-side: top;
-  margin: 5px 0px;
 }
 #coupon-breakdown-highcharts-data-table caption::before {
   visibility: visible;
@@ -85,6 +85,11 @@ th.text {
   position: absolute;
   content: "Portfolio";
   right: 0;
+}
+
+/* Add bold border to table header */
+#coupon-breakdown-highcharts-data-table thead tr {
+  border-bottom: 2px solid var(--table-border);
 }
 
 /* Coupon Breakdown table data alignment */
@@ -165,16 +170,24 @@ th.text {
   margin: 5px 0px;
 }
 
-#securities-table .data {
+.securities-table .data {
   border-top: 1px solid var(--table-border);
 }
 
-#securities-table th,
-#securities-table td {
-  padding: 5px;
-  border-right: 1px dashed var(--table-border);
+#header-categories {
+  border-bottom: 2px solid var(--table-border);
 }
 
+.securities-table th,
+.securities-table td {
+  padding: 4.5px;
+  border-right: 1px dashed var(--table-border-light);
+}
+
+#header-categories th:nth-child(1),
+#header-categories th:nth-child(2),
+.data td:nth-child(1),
+.data td:nth-child(2),
 #portfolio-weights-data td:nth-child(1),
 #portfolio-weights-data td:nth-child(2) {
   border-right: none;
@@ -189,7 +202,6 @@ th.text {
 #portfolio-weights-data {
   text-align: right;
 }
-
 
 #header-categories th:nth-child(1),
 #header-categories th:nth-child(2),
@@ -208,26 +220,27 @@ th.text {
   font-weight: bold;
 }
 
+
 /*==== COLORS FOR REFERENCE ONLY ===*/
 :root {
---green-1: #081F1C;
---green-2: #125131;
---green-3: #167633;
---green-4: #21A235;
---green-5: #36BA39;
---green-6: #54C53C;
---green-7: #78CB42;
---green-8: #9CD353;
---green-9: #C2E576;
---green-10: #E7F4B8;
---blue-1: #0E003C;
---blue-2: #1c1880;
---blue-3: #1d2d96;
---blue-4: #1f4cab;
---blue-5: #1f4cab;
---blue-6: #308bc4;
+--green-1: #54c53c;
+--green-2: #21a235;
+--green-3: #9cd353;
+--green-4: #125131;
+--green-5: #e7f4b8;
+--green-6: #36ba39;
+--green-7: #78cb42;
+--green-8: #167633;
+--green-9: #c2e576;
+--green-10: #081f1c;
+--blue-1: #308bc4;
+--blue-2: #1f4cab;
+--blue-3: #51c7d2;
+--blue-4: #1c1880;
+--blue-5: #b8f0e5;
+--blue-6: #266aba;
 --blue-7: #3dabcb;
---blue-8: #3dabcb;
---blue-9: #7ddcdc;
---blue-10: #7ddcdc;
+--blue-8: #1d2d96;
+--blue-9: #51c7d2;
+--blue-10: #0e003c;
 }

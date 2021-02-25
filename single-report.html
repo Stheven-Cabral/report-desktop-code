@@ -5,21 +5,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Report Desktop View</title>
+  <title>Portfolio Report</title>
 
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
   <script src="https://code.highcharts.com/modules/export-data.js"></script>
   <script src="https://code.highcharts.com/modules/accessibility.js"></script>
   <script src="https://code.highcharts.com/modules/data.js"></script>
-  <script src="index.js"></script>
+  <script src="js/single-report.js"></script>
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap"
     rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/single-report.css">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
     <div id="coupon-breakdown-section-chart" class="mb-5">
       <div id="container"></div>
     </div>
-    <table style="width:100%" id="securities-table">
+    <table style="width:100%" id="securities-table" class="securities-table">
       <caption id="securities-table-title" class="fw-bold">SECURITIES BREAKDOWN</caption>
       <tr id="header-categories">
         <th>Symbol</th>

@@ -1,48 +1,43 @@
 /***
- * @array dataColorsBlue - Array of colors for donut chart.
+ * @array colorsAllBlue - Blue array of colors for data.
+ * @array colorsAllBlue - Blue array of colors for data.
+ * @array colorsAllBlue - Blue array of colors for data.
  * @array couponBreakdownChartData - Array of objects containing data for donut highchart.
  */
-const dataColorsBlue = ["#0E003C", "#1c1880", "#1d2d96", "#1f4cab", "#1f4cab", "#308bc4", "#3dabcb", "#3dabcb", "#7ddcdc", "#7ddcdc"];
-const dataColorsGreen = ["#081F1C", "#125131", "#167633", "#21A235", "#36BA39", "#54C53C", "#78CB42", "#9CD353", "#C2E576", "#E7F4B8"];
+const colorsAllGreen = ['#54c53c', '#21a235', '#9cd353', '#125131', '#e7f4b8', '#36ba39', '#78cb42', '#167633', '#c2e576', '#081f1c'];
+const colorsAllBlue = ['#308bc4', '#1f4cab', '#51c7d2', '#1c1880', '#b8f0e5', '#266aba', '#3dabcb', '#1d2d96', '#51c7d2', '#0e003c'];
+const colorsMixedBlueGreen = ['#2a8bb0', '#76bf64', '#1a419e', '#c2e576', '#0e003c', '#4ba68f', '#1a69b1', '#9cd353', '#1b2085', '#e7f4b8', '#167633'];
 
 const couponBreakdownChartData = [
   {
     y: 51.7,
-    name: "0 %",
-    color: dataColorsGreen[0]
+    name: "0 %"
   },
   {
     y: 8.28,
-    name: "0-2 %",
-    color: dataColorsGreen[1]
+    name: "0-2 %"
   },
   {
     y: 32.79,
-    name: "2-4 %",
-    color: dataColorsGreen[2]
+    name: "2-4 %"
   },
   {
     y: 5.85,
-    name: "4-6 %",
-    color: dataColorsGreen[3]
+    name: "4-6 %"
   },
   {
     y: 1.37,
-    name: "6-8 %",
-    color: dataColorsGreen[4]
+    name: "6-8 %"
   },
   {
     y: 0.01,
-    name: "8-10 %",
-    color: dataColorsGreen[5]
+    name: "8-10 %"
   },
   {
     y: 0,
-    name: ">10 %",
-    color: dataColorsGreen[6]
-  },
+    name: ">10 %"
+  }
 ];
-
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -50,12 +45,13 @@ document.addEventListener('DOMContentLoaded', function () {
    * On document load, donut chart is generated from `couponBreakdownChartData`.
    */
   Highcharts.chart('container', {
+    colors: colorsAllGreen,
     chart: {
       plotBackgroundColor: null,
       plotBorderWidth: 0,
       plotShadow: false,
-      width: 355,
-      height: 355,
+      width: 350,
+      height: 350,
       margin: [0, 0, 0, 0]
     },
     title: {
@@ -81,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
     series: [{
       type: 'pie',
       name: 'Coupon Breakdown',
-      innerSize: '75%',
+      innerSize: '65%',
       data: couponBreakdownChartData
     }],
     exporting: {
@@ -102,10 +98,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /***
    * On document load, the circle icon colors in the 'Coupon Breakdown' table are assigned
-   based on the 'dataColorsGreen' array.
+   based on the 'colorsAllGreen' array.
    */
   const htmlElement = document.querySelector("html");
-  for (let i = 0; i <= dataColorsGreen.length; i++) {
-    htmlElement.style.setProperty(`--category-circle-icon-${i}`, dataColorsGreen[i]);
+  for (let i = 0; i <= colorsAllGreen.length; i++) {
+    htmlElement.style.setProperty(`--category-circle-icon-${i}`, colorsAllGreen[i]);
   }
 });
