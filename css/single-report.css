@@ -57,7 +57,6 @@ body {
 }
 
 #coupon-breakdown-highcharts-data-table tr {
-  margin-left: 50px;
   border-top: 1px solid var(--table-border);
 }
 
@@ -167,7 +166,6 @@ th.text {
   caption-side: top;
   font-size: 20px;
   color: black;
-  margin: 5px 0px;
 }
 
 .securities-table .data {
