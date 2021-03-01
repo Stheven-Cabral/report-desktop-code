@@ -53,7 +53,7 @@ caption {
 }
 
 #coupon-breakdown-highcharts-data-table {
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 #coupon-breakdown-highcharts-data-table tr {
@@ -100,61 +100,34 @@ th.text {
 }
 
 /* Adds circle symbol next to category items */
-#coupon-breakdown-highcharts-data-table tbody tr:nth-child(1) th::before {
+#coupon-breakdown-highcharts-data-table tbody tr th::before {
   display: inline-block;
   content: "";
   width: 12px;
   height: 12px;
-  background-color: #54c53c;
+  background-color: grey;
   margin-right: 10px;
+}
+#coupon-breakdown-highcharts-data-table tbody tr:nth-child(1) th::before {
+  background-color: #54c53c;
 }
 #coupon-breakdown-highcharts-data-table tbody tr:nth-child(2) th::before {
-  display: inline-block;
-  content: "";
-  width: 12px;
-  height: 12px;
   background-color: #21a235;
-  margin-right: 10px;
 }
 #coupon-breakdown-highcharts-data-table tbody tr:nth-child(3) th::before {
-  display: inline-block;
-  content: "";
-  width: 12px;
-  height: 12px;
-  background-color: #9cd353;
-  margin-right: 10px;
+  background-color: #9CD353;
 }
 #coupon-breakdown-highcharts-data-table tbody tr:nth-child(4) th::before {
-  display: inline-block;
-  content: "";
-  width: 12px;
-  height: 12px;
   background-color: #125131;
-  margin-right: 10px;
 }
 #coupon-breakdown-highcharts-data-table tbody tr:nth-child(5) th::before {
-  display: inline-block;
-  content: "";
-  width: 12px;
-  height: 12px;
   background-color: #e7f4b8;
-  margin-right: 10px;
 }
 #coupon-breakdown-highcharts-data-table tbody tr:nth-child(6) th::before {
-  display: inline-block;
-  content: "";
-  width: 12px;
-  height: 12px;
   background-color: #36ba39;
-  margin-right: 10px;
 }
 #coupon-breakdown-highcharts-data-table tbody tr:nth-child(7) th::before {
-  display: inline-block;
-  content: "";
-  width: 12px;
-  height: 12px;
   background-color: #78cb42;
-  margin-right: 10px;
 }
 
 
@@ -252,15 +225,9 @@ th.text {
     padding: 2px;
   }
 
-  #coupon-breakdown-highcharts-data-table tbody tr:nth-child(1) th::before,
-  #coupon-breakdown-highcharts-data-table tbody tr:nth-child(2) th::before,
-  #coupon-breakdown-highcharts-data-table tbody tr:nth-child(3) th::before,
-  #coupon-breakdown-highcharts-data-table tbody tr:nth-child(4) th::before,
-  #coupon-breakdown-highcharts-data-table tbody tr:nth-child(5) th::before,
-  #coupon-breakdown-highcharts-data-table tbody tr:nth-child(6) th::before,
-  #coupon-breakdown-highcharts-data-table tbody tr:nth-child(7) th::before {
-    width: 5px;
-    height: 5px;
+  #coupon-breakdown-highcharts-data-table tbody tr th::before {
+    width: 7px;
+    height: 7px;
   }
 
   #securities-table {
