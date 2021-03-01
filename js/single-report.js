@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function () {
       plotBackgroundColor: null,
       plotBorderWidth: 0,
       plotShadow: false,
-      width: 350,
-      height: 350,
+      width: 275,
+      height: 275,
       margin: [0, 0, 0, 0]
     },
     title: {
