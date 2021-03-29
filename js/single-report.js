@@ -1,7 +1,7 @@
 /***
- * @array colorsAllBlue - Blue array of colors for data.
- * @array colorsAllBlue - Blue array of colors for data.
- * @array colorsAllBlue - Blue array of colors for data.
+ * @array colorsAllGreen - Array of green colors for data.
+ * @array colorsAllBlue - array of blue colors for data.
+ * @array colorsMixedBlueGreen - array of mixed blue and green colors for data.
  * @array couponBreakdownChartData - Array of objects containing data for donut highchart.
  */
 const colorsAllGreen = ['#54c53c', '#21a235', '#9cd353', '#125131', '#e7f4b8', '#36ba39', '#78cb42', '#167633', '#c2e576', '#081f1c'];
